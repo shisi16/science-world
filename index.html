@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Science World</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="brand">🌎 Science <span>World</span></div>
+    <div class="nav-actions">
+      <button id="musicBtn" type="button">🎵 Musik OFF</button>
+      <button id="darkBtn" type="button">🌙 Mode</button>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- BERANDA -->
+    <section id="home">
+      <div class="hero">
+        <div class="hero-content">
+          <p class="tag">✨ LEARN • PLAY • WIN</p>
+          <h1>Welcome to<br><span>Science World!</span></h1>
+          <p>Belajar berbagai mata pelajaran sambil bermain kuis.</p>
+          <input id="playerName" type="text" maxlength="20"
+                 placeholder="Masukkan nama pemain">
+          <button id="startBtn" class="primary" type="button">
+            Mulai Bermain 🚀
+          </button>
+        </div>
+        <div class="hero-icon">🧠</div>
+      </div>
+
+      <div class="stats">
+        <div class="stat-card">
+          <span>🏆</span>
+          <h2 id="totalPoints">0</h2>
+          <p>Total Poin</p>
+        </div>
+        <div class="stat-card">
+          <span>🎮</span>
+          <h2 id="totalGames">0</h2>
+          <p>Permainan</p>
+        </div>
+        <div class="stat-card">
+          <span>⭐</span>
+          <h2 id="bestScore">0</h2>
+          <p>Skor Terbaik</p>
+        </div>
+      </div>
+
+      <h2 class="section-title">📚 Pilih Kategori</h2>
+      <div id="categories" class="category-grid"></div>
+
+      <div class="bottom-grid">
+        <div class="panel">
+          <h2>🏆 Leaderboard</h2>
+          <ol id="leaderboard"></ol>
+        </div>
+        <div class="panel">
+          <h2>🎖️ Achievement</h2>
+          <div id="achievements"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HALAMAN KUIS -->
+    <section id="quiz" class="hidden">
+      <div class="quiz-top">
+        <button id="backBtn" type="button">← Kembali</button>
+        <strong id="categoryName">Kategori</strong>
+      </div>
+
+      <div class="quiz-info">
+        <div>Soal <b id="questionNumber">1/10</b></div>
+        <div>⏱️ <b id="timer">20</b> detik</div>
+        <div>⭐ <b id="score">0</b> poin</div>
+      </div>
+
+      <div class="progress">
+        <div id="progressBar"></div>
+      </div>
+
+      <div class="question-card">
+        <div class="question-icon">💡</div>
+        <p id="questionText">Pertanyaan akan muncul di sini.</p>
+
+        <div id="answers" class="answer-grid"></div>
+
+        <div id="feedback" aria-live="polite"></div>
+
+        <div class="quiz-buttons">
+          <button id="hintBtn" type="button">💡 Hint (3)</button>
+          <button id="nextBtn" class="primary hidden" type="button">
+            Soal Berikutnya →
+          </button>
+        </div>
+      </div>
+
+      <div class="combo">🔥 Streak: <span id="streak">0</span></div>
+    </section>
+
+    <!-- HALAMAN HASIL -->
+    <section id="result" class="hidden">
+      <div class="result-card">
+        <div class="result-icon">🎉</div>
+        <h1>Permainan Selesai!</h1>
+        <p id="resultMessage"></p>
+
+        <div class="result-stats">
+          <div>
+            <h2 id="finalScore">0</h2>
+            <p>Total Poin</p>
+          </div>
+          <div>
+            <h2 id="correctCount">0</h2>
+            <p>Jawaban Benar</p>
+          </div>
+          <div>
+            <h2 id="wrongCount">0</h2>
+            <p>Jawaban Salah</p>
+          </div>
+        </div>
+
+        <p id="rewardText"></p>
+
+        <div class="result-buttons">
+          <button id="homeBtn" class="primary" type="button">
+            🏠 Kembali ke Beranda
+          </button>
+          <button id="retryBtn" type="button">
+            🔄 Main Lagi
+          </button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>Made with 💗 Science World © 2026</footer>
+
+  <!-- Script dipanggil setelah semua elemen HTML tersedia -->
+  <script src="script.js"></script>
+</body>
+</html>
